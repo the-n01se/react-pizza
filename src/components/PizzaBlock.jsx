@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 
 function PizzaBlock({ title, price, imageUrl, sizes, types }) {
-
   const [activeTypeIndex, setActiveType] = useState(0);
   const [activeSizeIndex, setActiveSize] = useState(0);
 
   const typePizzas = ["тонкое", "традиционное"];
 
-  const typesList = types.map((type, i) => (
+  const typesList = types.map((typeId) => (
     <li
-      onClick={() => setActiveType(i)}
-      className={activeTypeIndex === i ? "active" : ""}
+      key={typeId}
+      onClick={() => setActiveType(typeId)}
+      className={activeTypeIndex === typeId ? "active" : ""}
     >
-      {typePizzas[type]}
+      {typePizzas[typeId]}
     </li>
   ));
   const sizesList = sizes.map((size, i) => (
     <li
+      key={size}
       onClick={() => setActiveSize(i)}
       className={activeSizeIndex === i ? "active" : ""}
     >

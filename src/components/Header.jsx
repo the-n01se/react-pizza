@@ -4,7 +4,7 @@ import logoImg from '../assets/img/pizza-logo.svg'
 
 function Header() {
   return (
-    <div div className="header" >
+    <div className="header" >
       <div className="container">
         <div className="header__logo">
           <img width="38" src={logoImg} alt="Pizza logo" />

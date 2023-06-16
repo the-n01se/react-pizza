@@ -18,6 +18,7 @@ function Categories() {
 
   const categoriesList = categories.map((n, index) => (
     <li
+      key={index}
       onClick={() => onClickCategory(index)}
       className={activeIndex === index ? "active" : ""}
     >
@@ -27,9 +28,7 @@ function Categories() {
 
   return (
     <div className="categories">
-      <ul>
-        {categoriesList}
-      </ul>
+      <ul>{categoriesList}</ul>
     </div>
   );
 }

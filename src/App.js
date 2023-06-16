@@ -12,7 +12,7 @@ import './scss/app.scss';
 function App() {
 
   const pizzasItemsList = pizzas.map((item) => (
-    <PizzaBlock {...item} />
+    <PizzaBlock key={item.id} {...item} />
   ))
 
   return (
