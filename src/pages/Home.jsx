@@ -15,6 +15,7 @@ function Home() {
         setItems(arr);
         setIsLoading(false);
       });
+      window.scrollTo(0, 0);
   }, []);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ function Home() {
   ));
 
   return (
-    <>
+    <div className="container">
       <div className="content__top">
         <Categories />
         <Sort />
@@ -35,7 +36,7 @@ function Home() {
           ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
           : pizzasItemsList}
       </div>
-    </>
+    </div>
   );
 }
 
