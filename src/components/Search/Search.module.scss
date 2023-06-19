@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .search_icon {
+    width: 22px;
+    height: 22px;
+    left: 10px;
+    line,
+    circle {
+      stroke: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .clear_icon {
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    g {
+      stroke: rgba(0, 0, 0, 0.3);
+    }
+  }
+  input {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 8px 35px 8px 35px;
+    width: 300px;
+    border-radius: 12px;
+    font-size: 16px;
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
