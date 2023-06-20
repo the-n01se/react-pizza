@@ -37,7 +37,7 @@ function Home({ searchValue }) {
   ));
   const pizzas = items
     .filter((obj) => {
-      if (obj.title.includes(searchValue)) {
+      if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
         return true;
       }
       return false;
