@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  a {
+    position: relative;
+    color: #ffffff;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover {
+      color: #282828;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #282828;
+      border-radius: 50%;
+      z-index: -1;
+      border: 2px solid transparent;
+      transition: .3s;
+    }
+    &:hover::before {
+      background-color: transparent;
+      border: 2px solid #282828;
+      transition: .3s;
+    }
+  }
+}
