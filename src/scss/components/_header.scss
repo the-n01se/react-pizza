@@ -13,15 +13,12 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      input {
-        padding: 13px 35px;
-      }
     }
   }
   &__right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 35px;
     @media (max-width: 660px) {
       flex-direction: column;
       gap: 10px;
@@ -52,6 +49,9 @@
 
     p {
       color: #7b7b7b;
+      @media (max-width: 390px) {
+        font-size: 14px;
+      }
     }
   }
 }

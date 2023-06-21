@@ -25,12 +25,19 @@
   }
   input {
     border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 8px 35px 8px 35px;
+    padding: 8px 35px;
     width: 300px;
     border-radius: 12px;
     font-size: 16px;
     &:focus {
       border-color: rgba(0, 0, 0, 0.3);
+    }
+    @media (max-width: 1050px) {
+      padding: 13px 35px;
+    }
+    @media (max-width: 390px) {
+      max-width: 250px;
+      padding: 7px 30px 7px 35px;
     }
   }
 }
